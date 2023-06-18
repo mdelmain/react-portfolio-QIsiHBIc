@@ -3,7 +3,7 @@ import '../styles/ProjectCard.css';
 export default function ProjectCard({image, title, text, siteLink, githubLink}) {
     return (
         <div className="bg-image">
-            <img src={image} alt={title} />
+            <img src={image} alt={title} height={400} width={600}/>
             <div className="card-title">
                 <a href={siteLink}>{title}</a>
                 <a href={githubLink}>
