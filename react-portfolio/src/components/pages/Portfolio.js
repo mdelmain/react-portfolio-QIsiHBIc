@@ -1,17 +1,62 @@
-import React from 'react';
+import React from "react";
+import ProjectCard from "../ProjectCard";
 
+const container = {
+  display: "flex",
+  flexWrap: "wrap",
+  alignItems: "center",
+  gap: "20px 20px",
+  justifyContent: "center",
+  // minWidth: '800px',
+};
 export default function Portfolio() {
-    return (
-        <>
-          <h1>Portfolio</h1>
-          <p>
-            Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-            Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-            mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-            lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-            imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-            in. Sed rhoncus mollis diam, sißt amet facilisis lectus blandit at.
-          </p>
-        </>
-      );
-    }
+  return (
+    <>
+      <h1>Portfolio</h1>
+      <div style={container}>
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+        <ProjectCard
+          image="https://placehold.co/600x400/png"
+          title="cardcap"
+          text="MERN stack"
+          siteLink="#"
+          githubLink="#"
+        />
+      </div>
+    </>
+  );
+}

@@ -1,0 +1,37 @@
+.bg-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-title {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    gap: 16px;
+}
+
+.bg-image:hover .card-title {
+    display: flex;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.card-title img {
+    background-color: transparent;
+}
+
+.card-description {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 32px;
+}
+
+.bg-image:hover .card-description {
+    display: block;
+}

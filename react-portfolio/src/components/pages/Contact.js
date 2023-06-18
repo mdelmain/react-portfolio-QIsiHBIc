@@ -16,7 +16,7 @@ export default function Contact() {
     if (!name || name === '') {
         newErrors.name = 'cannot be blank';
     }
-
+    //add regex
     if (!email || email === '') {
         newErrors.email = 'cannot be blank';
     } else if (email === 'mandy@gmail.com') {
