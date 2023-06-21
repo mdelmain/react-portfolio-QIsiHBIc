@@ -8,6 +8,7 @@ const container = {
   gap: "40px 40px",
   justifyContent: "center",
   backgroundColor: "#203354",
+  color: "#000000",
 };
 
 export default function Portfolio() {
