@@ -5,10 +5,11 @@ const container = {
   display: "flex",
   flexWrap: "wrap",
   alignItems: "center",
-  gap: "20px 20px",
+  gap: "40px 40px",
   justifyContent: "center",
   backgroundColor: "#203354",
 };
+
 export default function Portfolio() {
   return (
     <>

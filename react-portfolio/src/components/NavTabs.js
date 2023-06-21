@@ -1,9 +1,19 @@
 import React from 'react';
 
+const name = {
+  marginBottom: "1px",
+  paddingTop: "8px",
+  paddingBottom: "8px",
+  paddingLeft: "20px",
+  paddingRight: "35px",
+
+}
 
 export default function NavTabs({ currentPage, handlePageChange }) {
   return (
+  <div>
     <ul className="nav nav-tabs">
+      <h4 style={name}>Mandy Delmaine</h4>
       <li className="nav-item">
         <a
           href="#AboutMe"
@@ -45,6 +55,7 @@ export default function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
+  </div>
   );
 }
 

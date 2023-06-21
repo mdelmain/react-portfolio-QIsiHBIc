@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 export default function Contact() {
   const [form, setForm] = useState({});
@@ -16,10 +17,10 @@ export default function Contact() {
     if (!name || name === '') {
         newErrors.name = 'cannot be blank';
     }
-    //add regex
+    
     if (!email || email === '') {
         newErrors.email = 'cannot be blank';
-    } else if (email === 'mandy@gmail.com') {
+    } else if (!/@/.exec(email)) {
         newErrors.email = 'bad email'
     }
 
@@ -42,30 +43,52 @@ export default function Contact() {
     }
   };
 
+    const button = {
+      marginTop: "20px",
+    }
+
   return (
     <div>
       <h1>Contact</h1>
       <Form style={{ width: "500px" }}>
         <Form.Group>
           <Form.Label>Name</Form.Label>
-          <Form.Control type="text" onChange={e => setField('name', e.target.value)} isInvalid={!!errors.name} />
+          <Form.Control
+            required
+            type="text"
+            onChange={e => setField('name', e.target.value)}
+            onBlur={e => setErrors(e.target.value === '' ? {name: 'required' } : {})}
+            isInvalid={!!errors.name}
+          />
           <Form.Control.Feedback type='invalid'>{errors.name}</Form.Control.Feedback>
         </Form.Group>
         
         <Form.Group>
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" onChange={e => setField('email', e.target.value)} isInvalid={!!errors.email} />
+          <Form.Control
+            required
+            type="email"
+            onChange={e => setField('email', e.target.value)}
+            onBlur={e => setErrors(e.target.value === '' ? {email: 'required' } : {})}
+            isInvalid={!!errors.email}
+          />
           <Form.Control.Feedback type='invalid'>{errors.email}</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
           <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" onChange={e => setField('message', e.target.value)} isInvalid={!!errors.message} />
+          <Form.Control
+            required
+            as="textarea"
+            onChange={e => setField('message', e.target.value)}
+            onBlur={e => setErrors(e.target.value === '' ? {message: 'required' } : {})}
+            isInvalid={!!errors.message}
+          />
           <Form.Control.Feedback type='invalid'>{errors.message}</Form.Control.Feedback>
         </Form.Group>
-        <button type="submit" onClick={handleFormSubmit}>
+        <Button type="submit" onClick={handleFormSubmit} variant="outline-light" size="md" style={button} >
           Submit
-        </button>
+        </Button>
       </Form>
     </div>
   );

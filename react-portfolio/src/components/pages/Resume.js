@@ -5,7 +5,8 @@ export default function Resume() {
         <>
           <h1>Resume</h1>
           <p>
-            Link to my resume:
+            {/* Download my resume <a href={require("./Resume.pdf")} download="Resume">here</a>. */}
+            Download my resume <a href="/assets/Resume.pdf" download="Resume">here</a>
           </p>
           <h3>Front End Proficiencies</h3>
           <ul>
