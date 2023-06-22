@@ -3,7 +3,7 @@
 ## Description 
 For the module 20 assignment I built a portfolio in React. The portfolio is a single-page application that includes an about me section, a contact form, links to projects, and a link to download a resume.
 
-The deployed page can be found here:
+The deployed page can be found here: https://mdelmain.github.io/react-portfolio-QIsiHBIc
 
 ## Installation
 N/A
